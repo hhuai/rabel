@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.16'
 
@@ -39,7 +39,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.12.0'
-  gem 'debugger'
+  # gem 'debugger'
 end
 
 group :test do
@@ -64,7 +64,7 @@ gem 'cancan'
 gem 'kaminari'
 gem 'carrierwave', "~> 0.6.2"
 gem 'carrierwave-upyun', '~> 0.1.6'
-gem 'rmagick'
+# gem 'rmagick'
 gem 'mime-types'
 gem 'redcarpet'
 gem 'coderay'
@@ -78,6 +78,6 @@ gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'slim-rails', '~> 1.0.3'
 gem 'simple_form', '~> 2.0.4'
 gem 'foreman', '~> 0.61.0'
-gem 'thin', '~> 1.5.0'
+# gem 'thin', '~> 1.5.0'
 gem 'figaro'
 
