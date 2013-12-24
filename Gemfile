@@ -25,7 +25,7 @@ gem 'jquery-ui-rails'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
-gem 'unicorn'
+gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -64,7 +64,7 @@ gem 'cancan'
 gem 'kaminari'
 gem 'carrierwave', "~> 0.6.2"
 gem 'carrierwave-upyun', '~> 0.1.6'
-# gem 'rmagick'
+gem 'rmagick'
 gem 'mime-types'
 gem 'redcarpet'
 gem 'coderay'
