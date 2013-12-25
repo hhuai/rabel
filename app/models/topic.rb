@@ -17,7 +17,7 @@ class Topic < ActiveRecord::Base
 
   validates :node_id, :user_id, :title, :presence => true
 
-  attr_accessible :title, :content
+  attr_accessible :title, :content, :from_src, :hidden
   attr_accessible :title, :content, :comments_closed, :sticky, :as => :admin
 
   after_create :send_notifications

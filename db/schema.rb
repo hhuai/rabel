@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121204032057) do
+ActiveRecord::Schema.define(:version => 20131225134420) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "user_id"
@@ -182,6 +182,8 @@ ActiveRecord::Schema.define(:version => 20121204032057) do
     t.boolean  "sticky",          :default => false
     t.string   "last_replied_by", :default => ""
     t.datetime "last_replied_at"
+    t.string   "from_src"
+    t.boolean  "hidden",          :default => false
   end
 
   add_index "topics", ["involved_at"], :name => "index_topics_on_involved_at"
