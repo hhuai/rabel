@@ -35,7 +35,7 @@
         次浏览
       .clearfix
     .inner
-      .content.topic_content= format_topic(@topic.content)
+      .content.topic_content= (@topic.content).html_safe
       - if user_signed_in?
         .pull-right
           - if current_user.bookmarked?(@topic)

@@ -19,6 +19,8 @@ Rabel::Application.routes.draw do
   get 'captcha' => 'welcome#captcha'
   get 'sitemap' => 'welcome#sitemap'
 
+  resources :collections
+
   resources :nodes do
     resources :topics do
       member do

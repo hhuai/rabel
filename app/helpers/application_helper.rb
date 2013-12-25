@@ -77,6 +77,7 @@ module ApplicationHelper
   end
 
   def format_content(text)
+    return text.html_safe
     begin
       text = Rabel::LinkEmailParser.parse_url(Rabel::Base.h(text)) do |link|
         Rabel::Base.smart_url(link)
@@ -87,7 +88,8 @@ module ApplicationHelper
 
       nl_to_br(Rabel::Base.decode_symbols(Rabel::Base.make_mention_links(text))).html_safe
     rescue
-      h(text)
+      text.html_safe
+      # h(text)
     end
   end
 
