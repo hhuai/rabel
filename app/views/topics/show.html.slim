@@ -3,14 +3,15 @@
 = render 'topics/show/manage'
 
 - content_for :template_js do
-  | var creating_comment = false;
-  | $("textarea#comment_content").keydown(function(e) {
-  |  if (e.ctrlKey && e.keyCode == 13) {
-  |    if (creating_comment) return;
-  |    creating_comment = true
-  |    $("input[type=submit]").click();
-  |  }
-  | });
+  |
+    var creating_comment = false;
+    $("textarea#comment_content").keydown(function(e) {
+     if (e.ctrlKey && e.keyCode == 13) {
+       if (creating_comment) return;
+       creating_comment = true;
+       $("input[type=submit]").click();
+     }
+    });
 
 - topic_user = @topic.cached_assoc_object(:user)
 

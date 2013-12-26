@@ -7,7 +7,7 @@
         - else
           = link_to '← 上一页', go_path(@node.key) + "?p=#{@prev_page_num}"
     li.center
-      span.gray= "# @page_num}/#{@total_pages "
+      span.gray= "#{@page_num}/#{@total_pages}"
 
     - if @next_page_num > 0
       li.next

@@ -1,0 +1,18 @@
+- content_for :final_head do
+  = javascript_include_tag  '/ueditor/ueditor.config'
+  = javascript_include_tag  '/ueditor/ueditor.all.min'
+  javascript:
+   $(function(){
+     window.UEDITOR_CONFIG.toolbars = 
+      [
+          ['fullscreen', 'source', '|', 'undo', 'redo', '|',
+              'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+              'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+              'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|'
+              ]
+      ];
+     window.UEDITOR_CONFIG.autoFloatEnabled = false;
+    
+    UE.getEditor('topic_content');
+   });
+
