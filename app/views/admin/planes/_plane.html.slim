@@ -3,7 +3,7 @@
     .fr
       = admin_edit_button('修改位面', plane, :remote => true, :class => 'dark')
       span.gray 
-        | /
+        | &nbsp;/&nbsp;
       = admin_create_button('添加节点', [plane, :node], {:class => 'dark', :remote => true})
       - if plane.can_delete?
         = admin_delete_button(plane, :remote => true)

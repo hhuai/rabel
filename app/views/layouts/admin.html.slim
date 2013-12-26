@@ -7,7 +7,7 @@
         - m[:items].each do |item|
           .cell
             = image_tag "admin/#{item.second}.png", :align => :absmiddle, :valign => :middle
-            | &nbsp;
+            | &nbsp;&nbsp;&nbsp;
             = link_to item.first, item.last, :class => (:current_item if @title == item.first)
       = yield :rightbar
   .span8
